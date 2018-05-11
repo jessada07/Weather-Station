@@ -90,7 +90,7 @@ if (!is_null($events['events'])) {
 			    'messages' => [$messages]
 			    ];
 }
-    if($battey != ''){
+    if($battery != ''){
     // Build message to reply back
 			$messages = [
 				'type' => 'text',
@@ -102,6 +102,7 @@ if (!is_null($events['events'])) {
 		          'to' => 'U1afc8417a53546990d662f7319e981e6',
 			      'messages' => [$messages]
 			    ];
+	    echo "<script>console.log( 'Debug Objects: " . $battery . "' );</script>";
     }
 	  	$post = json_encode($data);
 		$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
