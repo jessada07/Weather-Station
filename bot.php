@@ -95,12 +95,12 @@ if (!is_null($events['events'])) {
 	    if($battery > 20){
 	    	$messages = [
 				'type' => 'text',
-				'text' => 'Alert!!! Battery : '.$battery.' %'
+				'text' => 'Alert!!! Battery : 40 %'
 			];
 	    }else{
 	    	$messages = [
 				'type' => 'text',
-				'text' => 'Warning!!! Battery less than '.$battery.' %'
+				'text' => 'Warning!!! Battery less than 20 %'
 			];
 	    }
 			// Make a POST Request to Messaging API to reply to sender
