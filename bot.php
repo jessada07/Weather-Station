@@ -92,10 +92,17 @@ if (!is_null($events['events'])) {
 }
     if($battery != ''){
     // Build message to reply back
-			$messages = [
+	    if($battery > 20){
+	    	$messages = [
 				'type' => 'text',
-				'text' => 'Warning!!! Battery : '.$battery.' %'
+				'text' => 'Alert!!! Battery : '.$battery.' %'
 			];
+	    }else{
+	    	$messages = [
+				'type' => 'text',
+				'text' => 'Warning!!! Battery less than '.$battery.' %'
+			];
+	    }
 			// Make a POST Request to Messaging API to reply to sender
 	    $url = 'https://api.line.me/v2/bot/message/push';
 	    $data = [
